@@ -22,6 +22,7 @@ namespace Zu.WebBrowser
         ICoordinates Coordinates { get; }
         ITakesScreenshot Screenshot { get; }
         ITouchScreen TouchScreen { get; }
+        IActionExecutor ActionExecutor { get; }
 
         Task<string> Connect(CancellationToken cancellationToken = default(CancellationToken));
         Task CheckConnected(CancellationToken cancellationToken = default(CancellationToken));
