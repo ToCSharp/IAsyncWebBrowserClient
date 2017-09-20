@@ -44,7 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncInteractions\IAction.cs" />
+    <Compile Include="AsyncInteractions\IActionExecutor.cs" />
     <Compile Include="AsyncInteractions\IAlert.cs" />
+    <Compile Include="BasicTypes\ActionSequence.cs" />
+    <Compile Include="BasicTypes\InputDevice.cs" />
+    <Compile Include="BasicTypes\InputDeviceKind.cs" />
+    <Compile Include="BasicTypes\Interaction.cs" />
+    <Compile Include="BasicTypes\PauseInteraction.cs" />
     <Compile Include="BrowserOptions\AppCacheStatus.cs" />
     <Compile Include="BrowserOptions\IApplicationCache.cs" />
     <Compile Include="BrowserOptions\ICookieJar.cs" />
