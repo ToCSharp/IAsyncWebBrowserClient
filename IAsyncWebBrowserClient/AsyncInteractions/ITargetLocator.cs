@@ -67,8 +67,8 @@ namespace Zu.WebBrowser.AsyncInteractions
         /// <returns>A handle to the dialog.</returns>
         Task<IAlert> SwitchToAlert(CancellationToken cancellationToken = new CancellationToken());
 
-        Task<string> GetWindowHandle(CancellationToken cancellationToken);
+        Task<string> GetWindowHandle(CancellationToken cancellationToken = new CancellationToken());
 
-        Task<List<string>> GetWindowHandles(CancellationToken cancellationToken);
+        Task<List<string>> GetWindowHandles(CancellationToken cancellationToken = new CancellationToken());
     }
 }

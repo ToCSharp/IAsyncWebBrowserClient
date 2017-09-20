@@ -17,7 +17,7 @@ namespace Zu.WebBrowser.BrowserOptions
         /// <summary>
         ///     Gets the number of items in local storage.
         /// </summary>
-        Task<int> Count { get; }
+        Task<int> Count(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Returns value of the local storage given a key.

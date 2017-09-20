@@ -16,7 +16,7 @@ namespace Zu.WebBrowser.BrowserOptions
         /// <summary>
         ///     Gets the number of items in session storage.
         /// </summary>
-        Task<int> Count { get; }
+        Task<int> Count(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Returns value of the session storage given a key.

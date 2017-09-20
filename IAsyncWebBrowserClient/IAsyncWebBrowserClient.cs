@@ -25,8 +25,8 @@ namespace Zu.WebBrowser
 
         Task<string> Connect(CancellationToken cancellationToken = default(CancellationToken));
         Task CheckConnected(CancellationToken cancellationToken = default(CancellationToken));
-        Task Disconnect(CancellationToken cancellationToken);
-        Task<string> Close(CancellationToken cancellationToken = new CancellationToken());
+        Task Disconnect(CancellationToken cancellationToken = default(CancellationToken));
+        Task<string> Close(CancellationToken cancellationToken = default(CancellationToken));
         void CloseSync();
 
         Task<string> GetPageSource(CancellationToken cancellationToken = default(CancellationToken));

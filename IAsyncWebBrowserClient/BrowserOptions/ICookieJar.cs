@@ -16,7 +16,7 @@ namespace Zu.WebBrowser.BrowserOptions
         /// <summary>
         ///     Gets all cookies defined for the current page.
         /// </summary>
-        Task<ReadOnlyCollection<Cookie>> AllCookies { get; }
+        Task<ReadOnlyCollection<Cookie>> AllCookies (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Adds a cookie to the current page.

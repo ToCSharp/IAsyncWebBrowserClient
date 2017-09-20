@@ -16,7 +16,7 @@ namespace Zu.WebBrowser.BrowserOptions
         /// <summary>
         ///     Gets the list of available log types for this driver.
         /// </summary>
-        Task<ReadOnlyCollection<string>> AvailableLogTypes { get; }
+        Task<ReadOnlyCollection<string>> AvailableLogTypes(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Gets the set of <see cref="LogEntry" /> objects for a specified log.
