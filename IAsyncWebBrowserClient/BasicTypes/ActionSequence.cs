@@ -13,22 +13,22 @@ namespace Zu.WebBrowser.BasicTypes
     /// </summary>
     public class ActionSequence
     {
-        private List<Interaction> interactions = new List<Interaction>();
-        private InputDevice device;
+        public List<Interaction> Interactions { get; set; } = new List<Interaction>();
+        public InputDevice Device { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionSequence"/> class.
         /// </summary>
         /// <param name="device">The input device that executes this sequence of actions.</param>
         /// <param name="initialSize">the initial size of the sequence.</param>
-        public ActionSequence(InputDevice device, int initialSize)
+        public ActionSequence(InputDevice device, int initialSize = 0)
         {
             if (device == null)
             {
                 throw new ArgumentNullException("device", "Input device cannot be null.");
             }
 
-            this.device = device;
+            this.Device = device;
 
             for (int i = 0; i < initialSize; i++)
             {
@@ -41,7 +41,7 @@ namespace Zu.WebBrowser.BasicTypes
         /// </summary>
         public int Count
         {
-            get { return this.interactions.Count; }
+            get { return this.Interactions.Count; }
         }
 
         /// <summary>
@@ -56,12 +56,12 @@ namespace Zu.WebBrowser.BasicTypes
                 throw new ArgumentNullException("interactionToAdd", "Interaction to add to sequence must not be null");
             }
 
-            if (!interactionToAdd.IsValidFor(this.device.DeviceKind))
+            if (!interactionToAdd.IsValidFor(this.Device.DeviceKind))
             {
-                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, "Interaction {0} is invalid for device type {1}.", interactionToAdd.GetType(), this.device.DeviceKind), "interactionToAdd");
+                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, "Interaction {0} is invalid for device type {1}.", interactionToAdd.GetType(), this.Device.DeviceKind), "interactionToAdd");
             }
 
-            this.interactions.Add(interactionToAdd);
+            this.Interactions.Add(interactionToAdd);
             return this;
         }
 
@@ -71,10 +71,10 @@ namespace Zu.WebBrowser.BasicTypes
         /// <returns>A <see cref="Dictionary{TKey, TValue}"/> containing the actions in this sequence.</returns>
         public Dictionary<string, object> ToDictionary()
         {
-            Dictionary<string, object> toReturn = this.device.ToDictionary();
+            Dictionary<string, object> toReturn = this.Device.ToDictionary();
 
             List<object> encodedActions = new List<object>();
-            foreach (Interaction action in this.interactions)
+            foreach (Interaction action in this.Interactions)
             {
                 encodedActions.Add(action.ToDictionary());
             }
@@ -90,8 +90,8 @@ namespace Zu.WebBrowser.BasicTypes
         /// <returns>A string that represents the current <see cref="ActionSequence"/>.</returns>
         public override string ToString()
         {
-            StringBuilder builder = new StringBuilder("Action sequence - ").Append(this.device.ToString());
-            foreach (Interaction action in this.interactions)
+            StringBuilder builder = new StringBuilder("Action sequence - ").Append(this.Device.ToString());
+            foreach (Interaction action in this.Interactions)
             {
                 builder.AppendLine();
                 builder.AppendFormat("    {0}", action.ToString());
