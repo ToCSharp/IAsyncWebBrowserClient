@@ -9,7 +9,7 @@ namespace Zu.WebBrowser.BasicTypes
     /// <summary>
     /// Represents a pause action.
     /// </summary>
-    internal class PauseInteraction : Interaction
+    public class PauseInteraction : Interaction
     {
         private TimeSpan duration = TimeSpan.Zero;
 
