@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAsyncWebBrowserClient", "I
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F6242C7-526A-4EB6-A87D-A542541E4867}"
 	ProjectSection(SolutionItems) = preProject
+		NOTICE.txt = NOTICE.txt
 		README.md = README.md
 		THIRD-PARTY-NOTICES.txt = THIRD-PARTY-NOTICES.txt
 	EndProjectSection

@@ -6,7 +6,7 @@ bring it to our attention. Post an issue or email us:
 
           tocsharp@gmail.com 
           
-AsyncWebDriver that this document references does not necessarily use
+IAsyncWebBrowserClient that this document references does not necessarily use
 all the open source software packages referred to below and may also
 only use portions of a given package. More info in "NOTICE" file.
 
