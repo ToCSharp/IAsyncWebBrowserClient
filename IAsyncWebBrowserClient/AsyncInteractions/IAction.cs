@@ -14,6 +14,6 @@ namespace Zu.WebBrowser.AsyncInteractions
         /// <summary>
         ///     Performs this action on the browser.
         /// </summary>
-        Task Perform(CancellationToken cancellationToken = new CancellationToken());
+        Task Perform(CancellationToken cancellationToken = default(CancellationToken));
     }
 }

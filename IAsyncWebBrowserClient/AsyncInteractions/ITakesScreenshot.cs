@@ -16,6 +16,6 @@ namespace Zu.WebBrowser.AsyncInteractions
         ///     Gets a <see cref="Screenshot" /> object representing the image of the page on the screen.
         /// </summary>
         /// <returns>A <see cref="Screenshot" /> object containing the image.</returns>
-        Task<Screenshot> GetScreenshot(CancellationToken cancellationToken = new CancellationToken());
+        Task<Screenshot> GetScreenshot(CancellationToken cancellationToken = default(CancellationToken));
     }
 }

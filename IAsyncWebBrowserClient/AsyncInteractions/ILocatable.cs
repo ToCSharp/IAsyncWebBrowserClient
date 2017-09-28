@@ -22,6 +22,6 @@ namespace Zu.WebBrowser.AsyncInteractions
         ///     Gets the location of an element on the screen, scrolling it into view
         ///     if it is not currently on the screen.
         /// </summary>
-        Task<WebPoint> LocationOnScreenOnceScrolledIntoView(CancellationToken cancellationToken = new CancellationToken());
+        Task<WebPoint> LocationOnScreenOnceScrolledIntoView(CancellationToken cancellationToken = default(CancellationToken));
     }
 }

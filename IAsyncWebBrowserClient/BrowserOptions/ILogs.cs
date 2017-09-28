@@ -27,6 +27,6 @@ namespace Zu.WebBrowser.BrowserOptions
         /// </param>
         /// <returns>The list of <see cref="LogEntry" /> objects for the specified log.</returns>
         Task<ReadOnlyCollection<LogEntry>> GetLog(string logKind,
-            CancellationToken cancellationToken = new CancellationToken());
+            CancellationToken cancellationToken = default(CancellationToken));
     }
 }

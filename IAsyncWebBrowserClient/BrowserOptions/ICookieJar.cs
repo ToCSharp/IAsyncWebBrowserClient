@@ -22,7 +22,7 @@ namespace Zu.WebBrowser.BrowserOptions
         ///     Adds a cookie to the current page.
         /// </summary>
         /// <param name="cookie">The <see cref="Cookie" /> object to be added.</param>
-        Task AddCookie(Cookie cookie, CancellationToken cancellationToken = new CancellationToken());
+        Task AddCookie(Cookie cookie, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Gets a cookie with the specified name.
@@ -32,23 +32,23 @@ namespace Zu.WebBrowser.BrowserOptions
         ///     The <see cref="Cookie" /> containing the name. Returns <see langword="null" />
         ///     if no cookie with the specified name is found.
         /// </returns>
-        Task<Cookie> GetCookieNamed(string name, CancellationToken cancellationToken = new CancellationToken());
+        Task<Cookie> GetCookieNamed(string name, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Deletes the specified cookie from the page.
         /// </summary>
         /// <param name="cookie">The <see cref="Cookie" /> to be deleted.</param>
-        Task DeleteCookie(Cookie cookie, CancellationToken cancellationToken = new CancellationToken());
+        Task DeleteCookie(Cookie cookie, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Deletes the cookie with the specified name from the page.
         /// </summary>
         /// <param name="name">The name of the cookie to be deleted.</param>
-        Task DeleteCookieNamed(string name, CancellationToken cancellationToken = new CancellationToken());
+        Task DeleteCookieNamed(string name, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Deletes all cookies from the page.
         /// </summary>
-        Task DeleteAllCookies(CancellationToken cancellationToken = new CancellationToken());
+        Task DeleteAllCookies(CancellationToken cancellationToken = default(CancellationToken));
     }
 }

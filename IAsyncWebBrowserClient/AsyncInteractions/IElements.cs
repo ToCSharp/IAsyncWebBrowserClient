@@ -18,7 +18,7 @@ namespace Zu.WebBrowser.AsyncInteractions
         ///     Clicks at a set of coordinates using the primary mouse button.
         /// </summary>
         /// <param name="elementId">An elementId describing where to click.</param>
-        Task Click(string elementId, CancellationToken cancellationToken = new CancellationToken());
+        Task Click(string elementId, CancellationToken cancellationToken = default(CancellationToken));
 
         Task<JToken> FindElement(string strategy, string expr, string startNode = null, CancellationToken cancellationToken = default(CancellationToken));
 
@@ -28,9 +28,9 @@ namespace Zu.WebBrowser.AsyncInteractions
 
         Task<string> GetElementAttribute(string elementId, string attrName, CancellationToken cancellationToken = default(CancellationToken));
 
-        Task<string> GetElementProperty(string elementId, string propertyName, CancellationToken cancellationToken);
+        Task<string> GetElementProperty(string elementId, string propertyName, CancellationToken cancellationToken = default(CancellationToken));
 
-        Task<string> GetElementValueOfCssProperty(string elementId, string propertyName, CancellationToken cancellationToken);
+        Task<string> GetElementValueOfCssProperty(string elementId, string propertyName, CancellationToken cancellationToken = default(CancellationToken));
 
         Task<string> GetElementTagName(string elementId, CancellationToken cancellationToken = default(CancellationToken));
 
@@ -52,6 +52,6 @@ namespace Zu.WebBrowser.AsyncInteractions
 
         Task<string> SubmitElement(string elementId, CancellationToken cancellationToken = default(CancellationToken));
 
-        Task<string> ClearElement(string elementId, CancellationToken cancellationToken);
+        Task<string> ClearElement(string elementId, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

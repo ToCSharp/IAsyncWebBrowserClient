@@ -62,7 +62,7 @@ namespace Zu.WebBrowser.AsyncInteractions
         ///         variable, as if the function were called via "Function.apply"
         ///     </para>
         /// </remarks>
-        Task<object> ExecuteScript(string script, CancellationToken cancellationToken = new CancellationToken(),
+        Task<object> ExecuteScript(string script, CancellationToken cancellationToken = default(CancellationToken),
             params object[] args);
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Zu.WebBrowser.AsyncInteractions
         /// <param name="script">The JavaScript code to execute.</param>
         /// <param name="args">The arguments to the script.</param>
         /// <returns>The value returned by the script.</returns>
-        Task<object> ExecuteAsyncScript(string script, CancellationToken cancellationToken = new CancellationToken(),
+        Task<object> ExecuteAsyncScript(string script, CancellationToken cancellationToken = default(CancellationToken),
             params object[] args);
     }
 }

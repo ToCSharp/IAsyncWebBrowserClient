@@ -13,18 +13,18 @@ namespace Zu.WebBrowser.AsyncInteractions
     /// </summary>
     public interface INavigation
     {
-        Task<string> GetUrl(CancellationToken cancellationToken = new CancellationToken());
+        Task<string> GetUrl(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Move back a single entry in the browser's history.
         /// </summary>
-        Task Back(CancellationToken cancellationToken = new CancellationToken());
+        Task Back(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Move a single "item" forward in the browser's history.
         /// </summary>
         /// <remarks>Does nothing if we are on the latest page viewed.</remarks>
-        Task Forward(CancellationToken cancellationToken = new CancellationToken());
+        Task Forward(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Load a new web page in the current browser window.
@@ -39,7 +39,7 @@ namespace Zu.WebBrowser.AsyncInteractions
         ///     should the underlying page change while your test is executing the results of
         ///     future calls against this interface will be against the freshly loaded page.
         /// </remarks>
-        Task GoToUrl(string url, CancellationToken cancellationToken = new CancellationToken());
+        Task GoToUrl(string url, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Load a new web page in the current browser window.
@@ -54,11 +54,11 @@ namespace Zu.WebBrowser.AsyncInteractions
         ///     should the underlying page change while your test is executing the results of
         ///     future calls against this interface will be against the freshly loaded page.
         /// </remarks>
-        Task GoToUrl(Uri url, CancellationToken cancellationToken = new CancellationToken());
+        Task GoToUrl(Uri url, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Refreshes the current page.
         /// </summary>
-        Task Refresh(CancellationToken cancellationToken = new CancellationToken());
+        Task Refresh(CancellationToken cancellationToken = default(CancellationToken));
     }
 }

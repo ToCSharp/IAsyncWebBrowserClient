@@ -15,20 +15,20 @@ namespace Zu.WebBrowser.AsyncInteractions
         ///     Sends a sequence of keystrokes to the target.
         /// </summary>
         /// <param name="keySequence">A string representing the keystrokes to send.</param>
-        Task SendKeys(string keySequence, CancellationToken cancellationToken = new CancellationToken());
+        Task SendKeys(string keySequence, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Presses a key.
         /// </summary>
         /// <param name="keyToPress">The key value representing the key to press.</param>
         /// <remarks>The key value must be one of the values from the <see cref="Keys" /> class.</remarks>
-        Task PressKey(string keyToPress, CancellationToken cancellationToken = new CancellationToken());
+        Task PressKey(string keyToPress, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Releases a key.
         /// </summary>
         /// <param name="keyToRelease">The key value representing the key to release.</param>
         /// <remarks>The key value must be one of the values from the <see cref="Keys" /> class.</remarks>
-        Task ReleaseKey(string keyToRelease, CancellationToken cancellationToken = new CancellationToken());
+        Task ReleaseKey(string keyToRelease, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

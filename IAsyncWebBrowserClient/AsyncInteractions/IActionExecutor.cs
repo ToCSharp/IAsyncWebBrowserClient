@@ -16,17 +16,17 @@ namespace Zu.WebBrowser.AsyncInteractions
         /// <summary>
         /// Gets a value indicating whether this object is a valid action executor.
         /// </summary>
-        Task<bool> IsActionExecutor(CancellationToken cancellationToken = new CancellationToken());
+        Task<bool> IsActionExecutor(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Performs the specified list of actions with this action executor.
         /// </summary>
         /// <param name="actionSequenceList">The list of action sequences to perform.</param>
-        Task PerformActions(IList<ActionSequence> actionSequenceList, CancellationToken cancellationToken = new CancellationToken());
+        Task PerformActions(IList<ActionSequence> actionSequenceList, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Resets the input state of the action executor.
         /// </summary>
-        Task ResetInputState(CancellationToken cancellationToken = new CancellationToken());
+        Task ResetInputState(CancellationToken cancellationToken = default(CancellationToken));
     }
 }

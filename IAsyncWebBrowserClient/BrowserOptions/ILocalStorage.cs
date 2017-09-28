@@ -24,31 +24,31 @@ namespace Zu.WebBrowser.BrowserOptions
         /// </summary>
         /// <param name="key">key to for a local storage entry</param>
         /// <returns>Value of the local storage entry as <see cref="string " /> given a key.</returns>
-        Task<string> GetItem(string key, CancellationToken cancellationToken = new CancellationToken());
+        Task<string> GetItem(string key, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Returns the set of keys associated with local storage.
         /// </summary>
         /// <returns>Returns the set of keys associated with local storage as <see cref="HashSet{T}" />.</returns>
-        Task<ReadOnlyCollection<string>> KeySet(CancellationToken cancellationToken = new CancellationToken());
+        Task<ReadOnlyCollection<string>> KeySet(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Adds key/value pair to local storage.
         /// </summary>
         /// <param name="key">storage key</param>
         /// <param name="value">storage value</param>
-        Task SetItem(string key, string value, CancellationToken cancellationToken = new CancellationToken());
+        Task SetItem(string key, string value, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Removes key/value pair from local storage.
         /// </summary>
         /// <param name="key">key to remove from storage</param>
         /// <returns>Value from local storage as <see cref="string ">string</see> for the given key.</returns>
-        Task<string> RemoveItem(string key, CancellationToken cancellationToken = new CancellationToken());
+        Task<string> RemoveItem(string key, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Clears local storage.
         /// </summary>
-        Task Clear(CancellationToken cancellationToken = new CancellationToken());
+        Task Clear(CancellationToken cancellationToken = default(CancellationToken));
     }
 }

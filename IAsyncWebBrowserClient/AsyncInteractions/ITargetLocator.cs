@@ -17,14 +17,14 @@ namespace Zu.WebBrowser.AsyncInteractions
         /// </summary>
         /// <param name="frameIndex">The zero-based index of the frame to select.</param>
         /// <exception cref="NoSuchFrameException">If the frame cannot be found.</exception>
-        Task SwitchToFrame(int frameIndex, CancellationToken cancellationToken = new CancellationToken());
+        Task SwitchToFrame(int frameIndex, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Select a frame by its name or ID.
         /// </summary>
         /// <param name="frameName">The name of the frame to select.</param>
         /// <exception cref="NoSuchFrameException">If the frame cannot be found.</exception>
-        Task SwitchToFrame(string frameName, CancellationToken cancellationToken = new CancellationToken());
+        Task SwitchToFrame(string frameName, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Select a frame using its previously located <see cref="IWebElement" />
@@ -32,24 +32,24 @@ namespace Zu.WebBrowser.AsyncInteractions
         /// <param name="frameElement">The frame element to switch to.</param>
         /// <exception cref="NoSuchFrameException">If the element is neither a FRAME nor an IFRAME element.</exception>
         /// <exception cref="StaleElementReferenceException">If the element is no longer valid.</exception>
-        Task SwitchToFrameByElement(string element, CancellationToken cancellationToken = new CancellationToken());
+        Task SwitchToFrameByElement(string element, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Select the parent frame of the currently selected frame.
         /// </summary>
-        Task SwitchToParentFrame(CancellationToken cancellationToken = new CancellationToken());
+        Task SwitchToParentFrame(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Switches the focus of future commands for this driver to the window with the given name.
         /// </summary>
         /// <param name="windowName">The name of the window to select.</param>
         /// <exception cref="NoSuchWindowException">If the window cannot be found.</exception>
-        Task SwitchToWindow(string windowName, CancellationToken cancellationToken = new CancellationToken());
+        Task SwitchToWindow(string windowName, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Selects either the first frame on the page or the main document when a page contains iFrames.
         /// </summary>
-        Task SwitchToDefaultContent(CancellationToken cancellationToken = new CancellationToken());
+        Task SwitchToDefaultContent(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Switches to the element that currently has the focus, or the body element
@@ -59,16 +59,16 @@ namespace Zu.WebBrowser.AsyncInteractions
         ///     An <see cref="string" /> instance representing the element id
         ///     with the focus, or the body element if no element with focus can be detected.
         /// </returns>
-        Task<string> SwitchToActiveElement(CancellationToken cancellationToken = new CancellationToken());
+        Task<string> SwitchToActiveElement(CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         ///     Switches to the currently active modal dialog for this particular driver instance.
         /// </summary>
         /// <returns>A handle to the dialog.</returns>
-        Task<IAlert> SwitchToAlert(CancellationToken cancellationToken = new CancellationToken());
+        Task<IAlert> SwitchToAlert(CancellationToken cancellationToken = default(CancellationToken));
 
-        Task<string> GetWindowHandle(CancellationToken cancellationToken = new CancellationToken());
+        Task<string> GetWindowHandle(CancellationToken cancellationToken = default(CancellationToken));
 
-        Task<List<string>> GetWindowHandles(CancellationToken cancellationToken = new CancellationToken());
+        Task<List<string>> GetWindowHandles(CancellationToken cancellationToken = default(CancellationToken));
     }
 }
