@@ -51,6 +51,7 @@
     <Compile Include="BasicTypes\InputDeviceKind.cs" />
     <Compile Include="BasicTypes\Interaction.cs" />
     <Compile Include="BasicTypes\PauseInteraction.cs" />
+    <Compile Include="BasicTypes\WebBrowserException.cs" />
     <Compile Include="BrowserOptions\AppCacheStatus.cs" />
     <Compile Include="BrowserOptions\IApplicationCache.cs" />
     <Compile Include="BrowserOptions\ICookieJar.cs" />
