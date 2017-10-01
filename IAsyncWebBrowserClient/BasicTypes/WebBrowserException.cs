@@ -25,6 +25,12 @@ namespace Zu.WebBrowser.BasicTypes
 
         }
 
+        public WebBrowserException(string message, string error)
+            : base(message)
+        {
+            Error = error;
+        }
+
         public WebBrowserException(JToken json)
             :this(json["message"]?.ToString())
         {
