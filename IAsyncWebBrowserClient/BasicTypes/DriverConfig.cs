@@ -17,6 +17,7 @@ namespace Zu.WebBrowser.BasicTypes
         public bool Headless { get; set; } = false;
         public WebSize WindowSize { get; set; } = null;
         public bool DoNotOpenChromeProfile { get; set; } = false;
+        public bool DoOpenBrowserDevTools { get; set; } = false;
 
         public DriverConfig()
         {
@@ -75,6 +76,11 @@ namespace Zu.WebBrowser.BasicTypes
         public static T SetTempDirCreateDelay<T>(this T dc, int delay) where T : DriverConfig
         {
             dc.TempDirCreateDelay = delay;
+            return dc;
+        }
+        public static T SetDoOpenBrowserDevTools<T>(this T dc, bool doOpenBrowserDevTools = true) where T : DriverConfig
+        {
+            dc.DoOpenBrowserDevTools = doOpenBrowserDevTools;
             return dc;
         }
     }
