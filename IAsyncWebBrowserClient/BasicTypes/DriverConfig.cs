@@ -19,10 +19,12 @@ namespace Zu.WebBrowser.BasicTypes
         public bool DoNotOpenChromeProfile { get; set; } = false;
         public bool DoOpenBrowserDevTools { get; set; } = false;
 
+        static Random rnd = new Random();
+
         public DriverConfig()
         {
             this.SetIsTempProfile();
-            Port = 11000 + new Random().Next(4000);
+            Port = 11000 + rnd.Next(4000);
         }
     }
 
