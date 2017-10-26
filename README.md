@@ -21,4 +21,6 @@ Browser Drivers implement IAsyncWebBrowserClient interfaces and AsyncWebDriver u
 **[AsyncChromeDriver](https://github.com/ToCSharp/AsyncChromeDriver)** is Chrome WebDriver and Chrome DevTools in one library.  
 It connects directly to [Chrome DevTools](https://chromedevtools.github.io/devtools-protocol/) and is async from this connection. No need in chromedriver.exe. [NuGet](https://www.nuget.org/packages/AsyncChromeDriver/)
 
-**[AsyncFirefoxDriver](https://github.com/ToCSharp/AsyncWebDriver/tree/master/AsyncFirefoxDriver)** connects directly to Marionette and is async from this connection. No need in geckodriver.exe. [NuGet](https://www.nuget.org/packages/AsyncFirefoxDriver/)
+**[AsyncFirefoxDriver](https://github.com/ToCSharp/AsyncWebDriver/tree/master/AsyncFirefoxDriver)** connects directly to Marionette and is async from this connection. No need in geckodriver.exe. [NuGet](https://www.nuget.org/packages/AsyncFirefoxDriver/)  
+
+Look video of example of using Browser's Developer tools while using drivers: https://youtu.be/dNMuoeDmEME  
