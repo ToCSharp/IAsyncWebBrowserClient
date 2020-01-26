@@ -9,7 +9,7 @@ namespace Zu.WebBrowser.BasicTypes
     public class DriverConfig
     {
         public string UserDir { get; set; }
-        public string CommandLineArgumets { get; set; }
+        public string CommandLineArguments { get; set; }
         public bool IsTempProfile { get; set; } = true;
         public bool IsDefaultProfile { get; set; } = false;
         public int TempDirCreateDelay { get; set; } = 3000;
@@ -38,7 +38,7 @@ namespace Zu.WebBrowser.BasicTypes
         }
         public static T SetCommandLineArgumets<T>(this T dc, string args) where T : DriverConfig
         {
-            dc.CommandLineArgumets = args;
+            dc.CommandLineArguments = args;
             return dc;
         }
         public static T SetIsTempProfile<T>(this T dc, bool isTempProfile = true) where T : DriverConfig
