@@ -24,7 +24,7 @@ namespace Zu.WebBrowser.BasicTypes
 
         public override bool Equals(Object obj)
         {
-            return obj is WebPoint && this == (WebPoint)obj;
+            return obj is WebPoint point && this == point;
         }
         public override int GetHashCode()
         {
@@ -32,6 +32,8 @@ namespace Zu.WebBrowser.BasicTypes
         }
         public static bool operator ==(WebPoint a, WebPoint b)
         {
+            if (ReferenceEquals(a, null) || ReferenceEquals(b, null))
+                return ReferenceEquals(a, null) && ReferenceEquals(b, null);
             return a.X == b.X && a.Y == b.Y;
         }
         public static bool operator !=(WebPoint x, WebPoint y)
