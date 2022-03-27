@@ -30,17 +30,16 @@ namespace Zu.WebBrowser.BasicTypes
         {
             return X.GetHashCode() ^ Y.GetHashCode();
         }
-        public static bool operator ==(WebPoint a, WebPoint b)
+        public bool Equals(WebPoint other) => Equals(this, other);
+        bool Equals(WebPoint a, WebPoint b)
         {
-            if (a == null && b == null)
+            if (ReferenceEquals(a, b))
                 return true;
-            if (a == null || b == null)
+            if (ReferenceEquals(a, null) || ReferenceEquals(b, null))
                 return false;
             return a.X == b.X && a.Y == b.Y;
         }
-        public static bool operator !=(WebPoint x, WebPoint y)
-        {
-            return !(x == y);
-        }
+        public static bool operator ==(WebPoint a, WebPoint b) => a.Equals(b);
+        public static bool operator !=(WebPoint a, WebPoint b) => !a.Equals(b);
     }
 }

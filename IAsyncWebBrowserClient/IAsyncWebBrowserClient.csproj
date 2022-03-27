@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.5</Version>
+    <Version>0.2.6</Version>
     <Authors>Oleg Zudov</Authors>
     <Copyright>Copyright Oleg Zudov 2019</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
