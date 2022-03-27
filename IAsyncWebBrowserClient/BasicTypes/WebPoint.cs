@@ -32,6 +32,10 @@ namespace Zu.WebBrowser.BasicTypes
         }
         public static bool operator ==(WebPoint a, WebPoint b)
         {
+            if (a == null && b == null)
+                return true;
+            if (a == null || b == null)
+                return false;
             return a.X == b.X && a.Y == b.Y;
         }
         public static bool operator !=(WebPoint x, WebPoint y)
