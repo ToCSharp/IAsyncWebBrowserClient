@@ -3,20 +3,20 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.3</Version>
+    <Version>0.2.4</Version>
     <Authors>Oleg Zudov</Authors>
     <Copyright>Copyright Oleg Zudov 2019</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/ToCSharp/IAsyncWebBrowserClient</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ToCSharp/IAsyncWebBrowserClient</RepositoryUrl>
     <PackageTags>IAsyncWebBrowserClient WebDriver AsyncWebDriver AsyncChromeDriver AsyncFirefoxDriver</PackageTags>
-    <PackageReleaseNotes>Added .NET Standard 2.0 support</PackageReleaseNotes>
+    <PackageReleaseNotes>Newtonsoft.Json update</PackageReleaseNotes>
     <Description>Interfaces for Browser Drivers and WebDriver</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
