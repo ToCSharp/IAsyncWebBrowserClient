@@ -1,5 +1,7 @@
 ### IAsyncWebBrowserClient
 
+> **Development discontinued.** This project is no longer maintained. Further development continues at **[ZuChromeDriver](https://github.com/ZuChromeDriver/ZuChromeDriver)** — the successor with the same core idea (in-process CDP, chromedriver atom parity, async-first WebDriver API, and full Chrome DevTools access).
+
 Interfaces for .Net Browser Drivers and WebDriver 
 
 [![Join the chat at https://gitter.im/AsyncWebDriver/Lobby](https://badges.gitter.im/AsyncWebDriver/Lobby.svg)](https://gitter.im/AsyncWebDriver/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
